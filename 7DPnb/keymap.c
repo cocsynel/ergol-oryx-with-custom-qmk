@@ -7,35 +7,23 @@
 
 enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
-  ST_MACRO_0,
-  ST_MACRO_1,
-  ST_MACRO_2,
-  ST_MACRO_3,
-  ST_MACRO_4,
-  ST_MACRO_5,
-  ST_MACRO_6,
-  ST_MACRO_7,
-  ST_MACRO_8,
-  ST_MACRO_9,
-  ST_MACRO_10,
-  ST_MACRO_11,
-  ST_MACRO_12,
-  ST_MACRO_13,
-  ST_MACRO_14,
-  ST_MACRO_15,
-  ST_MACRO_16,
-  ST_MACRO_17,
-  ST_MACRO_18,
-  ST_MACRO_19,
-  ST_MACRO_20,
-  ST_MACRO_21,
-  ST_MACRO_22,
-  ST_MACRO_23,
-  ST_MACRO_24,
-  ST_MACRO_25,
-  ST_MACRO_26,
-  ST_MACRO_27,
-  ST_MACRO_28,
+  A_CIRC,
+  C_CED,
+  OE,
+  O_CIRC,
+  MU,
+  U_CIRC,
+  A_GRAVE,
+  E_AIGU,
+  E_GRAVE,
+  E_CIRC,
+  I_CIRC,
+  I_TREMA,
+  U_GRAVE,
+  AE,
+  THREE_DOTS,
+  MIDDLE_DOT,
+  TYPO_APO
 };
 
 
@@ -60,9 +48,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     DUAL_FUNC_0,    KC_1,           KC_2,           KC_3,           DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,                                    DUAL_FUNC_3,    DUAL_FUNC_4,    DUAL_FUNC_5,    DUAL_FUNC_6,    DUAL_FUNC_7,    DUAL_FUNC_8,    KC_ESCAPE,      
     KC_TAB,         KC_Q,           KC_C,           KC_O,           KC_P,           KC_W,           TG(6),                                          TG(5),          KC_J,           KC_M,           KC_D,           OSL(3),         KC_Y,           KC_AUDIO_VOL_UP,
     TG(1),          KC_A,           MT(MOD_LGUI, KC_S),MT(MOD_LCTL, KC_E),MT(MOD_LALT, KC_N),KC_F,           KC_TAB,                                                                         DUAL_FUNC_9,    KC_L,           MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_T),MT(MOD_LGUI, KC_I),KC_U,           KC_AUDIO_VOL_DOWN,
-    TT(5),          KC_Z,           KC_X,           KC_MINUS,       KC_V,           KC_B,                                           KC_DOT,         KC_H,           KC_G,           KC_COMMA,       KC_K,           KC_AUDIO_MUTE,  
+    TT(5),          KC_Z,           KC_X,           KC_MINS,       KC_V,           KC_B,                                           KC_DOT,         KC_H,           KC_G,           KC_COMM,       KC_K,           KC_AUDIO_MUTE,  
     KC_LEFT_CTRL,   KC_LEFT_ALT,    KC_LEFT_GUI,    KC_LEFT_SHIFT,  KC_RIGHT_ALT,   TD(DANCE_0),                                                                                                    LGUI(LSFT(KC_S)),MO(2),          KC_LEFT,        KC_RIGHT,       KC_UP,          KC_DOWN,        
-    MO(1),          KC_LEFT_CTRL,   LALT(KC_C),                     KC_ENTER,       KC_BSPC,        KC_SPACE
+    LSFT_T(KC_BSPC),          LT(5,KC_ENT),   LALT(KC_C),                     KC_ENTER,       LT(5,KC_ENT),        LT(2,KC_SPC)
   ),
   [1] = LAYOUT_moonlander(
     KC_TRANSPARENT, ST_MACRO_0,     ST_MACRO_1,     ST_MACRO_2,     KC_DLR,         KC_PERC,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_HASH,        KC_AT,          KC_TRANSPARENT, 
@@ -82,11 +70,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [3] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_3,     ST_MACRO_4,     KC_TRANSPARENT, ST_MACRO_5,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_11,    KC_UNDS,        OSL(4),         ST_MACRO_12,    KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_6,     ST_MACRO_7,     ST_MACRO_8,     ST_MACRO_9,     KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_LPRN,        KC_RPRN,        ST_MACRO_13,    ST_MACRO_14,    ST_MACRO_15,    KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_10,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 ST_MACRO_16,    KC_TRANSPARENT, KC_TRANSPARENT, KC_DOT,         KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, A_CIRC,     C_CED,     OE, O_CIRC,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, MU,    KC_UNDS,        KC_TRNS,         U_CIRC,    KC_TRANSPARENT, 
+    KC_TRANSPARENT, A_GRAVE,     E_AIGU,     E_GRAVE,     E_CIRC,     KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_LPRN,        KC_RPRN,        I_CIRC,    I_TREMA,    U_GRAVE,    KC_TRANSPARENT, 
+    KC_TRANSPARENT, AE,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 THREE_DOTS,    KC_TRANSPARENT, KC_TRANSPARENT, MIDDLE_DOT,         KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT, TYPO_APO, KC_TRANSPARENT,                 KC_TRANSPARENT, TYPO_APO, KC_TRANSPARENT
   ),
   [4] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -294,151 +282,267 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
     }
     break;
-    case ST_MACRO_0:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_2) SS_TAP(X_KP_8) ));
-    }
-    break;
-    case ST_MACRO_1:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_7) SS_TAP(X_KP_1) ));
-    }
-    break;
-    case ST_MACRO_2:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_8) SS_TAP(X_KP_7) ));
-    }
-    break;
-    case ST_MACRO_3:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_2) SS_TAP(X_KP_6) ));
-    }
-    break;
-    case ST_MACRO_4:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_1) ));
-    }
-    break;
-    case ST_MACRO_5:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_4) SS_TAP(X_KP_4) ));
-    }
-    break;
-    case ST_MACRO_6:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_2) SS_TAP(X_KP_4) ));
-    }
-    break;
-    case ST_MACRO_7:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_3) ));
-    }
-    break;
-    case ST_MACRO_8:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_2) ));
-    }
-    break;
-    case ST_MACRO_9:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_4) ));
-    }
-    break;
-    case ST_MACRO_10:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_0) ));
-    }
-    break;
-    case ST_MACRO_11:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_8) SS_TAP(X_KP_1) ));
-    }
-    break;
-    case ST_MACRO_12:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_5) SS_TAP(X_KP_1) ));
-    }
-    break;
-    case ST_MACRO_13:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_8) ));
-    }
-    break;
-    case ST_MACRO_14:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_9) ));
-    }
-    break;
-    case ST_MACRO_15:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_4) SS_TAP(X_KP_9) ));
-    }
-    break;
-    case ST_MACRO_16:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_3) SS_TAP(X_KP_3) ));
-    }
-    break;
-    case ST_MACRO_17:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_9) SS_TAP(X_KP_4) ));
-    }
-    break;
-    case ST_MACRO_18:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_9) SS_TAP(X_KP_9) ));
-    }
-    break;
-    case ST_MACRO_19:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_1) SS_TAP(X_KP_2) ));
-    }
-    break;
-    case ST_MACRO_20:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_9) SS_TAP(X_KP_2) ));
-    }
-    break;
-    case ST_MACRO_21:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_1) ));
-    }
-    break;
-    case ST_MACRO_22:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_0) ));
-    }
-    break;
-    case ST_MACRO_23:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_2) ));
-    }
-    break;
-    case ST_MACRO_24:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_9) SS_TAP(X_KP_8) ));
-    }
-    break;
-    case ST_MACRO_25:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_1) SS_TAP(X_KP_9) ));
-    }
-    break;
-    case ST_MACRO_26:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_6) ));
-    }
-    break;
-    case ST_MACRO_27:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_7) ));
-    }
-    break;
-    case ST_MACRO_28:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_1) SS_TAP(X_KP_7) ));
-    }
-    break;
+    case A_CIRC:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Â"); // Shifted version
+            } else {
+                send_unicode_string("â"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case C_CED:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Ç"); // Shifted version
+            } else {
+                send_unicode_string("ç"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case O_CIRC:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Ô"); // Shifted version
+            } else {
+                send_unicode_string("ô"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case MU:
+        if (record->event.pressed) {
+            send_unicode_string("µ");
+        }
+        return false;
+    case U_CIRC:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Û"); // Shifted version
+            } else {
+                send_unicode_string("û"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case A_GRAVE:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("À"); // Shifted version
+            } else {
+                send_unicode_string("à"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case E_AIGU:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("É"); // Shifted version
+            } else {
+                send_unicode_string("é"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case E_GRAVE:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("È"); // Shifted version
+            } else {
+                send_unicode_string("è"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case E_CIRC:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Ê"); // Shifted version
+            } else {
+                send_unicode_string("ê"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case I_CIRC:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Î"); // Shifted version
+            } else {
+                send_unicode_string("î"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case I_TREMA:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Ï"); // Shifted version
+            } else {
+                send_unicode_string("ï"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case U_GRAVE:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Ù"); // Shifted version
+            } else {
+                send_unicode_string("ù"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case AE:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Æ"); // Shifted version
+            } else {
+                send_unicode_string("æ"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case THREE_DOTS:
+        send_unicode_string("…");
+        return false;
+    case TYPO_APO:
+        send_unicode_string("’");
+        return false;
+    case OE:
+        if (record->event.pressed) {
+            // 1. Check if Shift is held
+            uint8_t mods = get_mods();
+            bool is_shifted = (mods & MOD_MASK_SHIFT);
+
+            // 2. Temporarily clear mods so they don't interfere with the sequence
+            unregister_mods(MOD_MASK_SHIFT);
+
+            if (is_shifted) {
+                send_unicode_string("Œ"); // Shifted version
+            } else {
+                send_unicode_string("œ"); // Unshifted version
+            }
+
+            // 3. Restore mods
+            set_mods(mods);
+        }
+        return false;
+    case MIDDLE_DOT:
+        send_unicode_string("·");
+        return false;
 
     case DUAL_FUNC_0:
       if (record->tap.count > 0) {
@@ -601,4 +705,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
+
+const key_override_t minus_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_MINS, KC_QUES);
+const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLN);
+const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SCLN);
+const key_override_t lafayette_key_override = ko_make_basic(MOD_MASK_SHIFT, OSL(3), KC_EXLM);
+
+// This globally defines all key overrides to be used
+const key_override_t *key_overrides[] = {
+	&minus_key_override,
+	&dot_key_override,
+	&comma_key_override,
+	&lafayette_key_override,
+    NULL
+};
 
