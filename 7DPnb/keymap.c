@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LSFT_T(KC_BSPC),          LT(5,KC_ENT),   LALT(KC_C),                     KC_ENTER,       LT(5,KC_ENT),        LT(2,KC_SPC)
   ),
   [1] = LAYOUT_moonlander(
-    KC_TRANSPARENT, ST_MACRO_0,     ST_MACRO_1,     ST_MACRO_2,     KC_DLR,         KC_PERC,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_HASH,        KC_AT,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT,     KC_TRANSPARENT,     KC_DLR,         KC_PERC,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_HASH,        KC_AT,          KC_TRANSPARENT, 
     KC_TRANSPARENT, LSFT(KC_Q),     LSFT(KC_C),     LSFT(KC_O),     LSFT(KC_P),     LSFT(KC_W),     KC_TRANSPARENT,                                 KC_TRANSPARENT, LSFT(KC_J),     LSFT(KC_M),     LSFT(KC_D),     KC_EXLM,        LSFT(KC_Y),     KC_TRANSPARENT, 
     KC_TRANSPARENT, LSFT(KC_A),     LSFT(KC_S),     LSFT(KC_E),     LSFT(KC_N),     LSFT(KC_F),     KC_TRANSPARENT,                                                                 KC_TRANSPARENT, LSFT(KC_L),     LSFT(KC_R),     LSFT(KC_T),     LSFT(KC_I),     LSFT(KC_U),     KC_TRANSPARENT, 
     KC_TRANSPARENT, LSFT(KC_Z),     LSFT(KC_X),     KC_QUES,        LSFT(KC_V),     LSFT(KC_B),                                     KC_COLN,        LSFT(KC_H),     LSFT(KC_G),     KC_SCLN,        LSFT(KC_K),     KC_TRANSPARENT, 
