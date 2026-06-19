@@ -292,9 +292,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Â"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_9) SS_TAP(X_KP_4) )); // Shifted version
             } else {
-                send_unicode_string("â"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_2) SS_TAP(X_KP_6) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -311,9 +311,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Ç"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_9) SS_TAP(X_KP_9) )); // Shifted version
             } else {
-                send_unicode_string("ç"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_1) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -330,9 +330,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Ô"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_1) SS_TAP(X_KP_2) )); // Shifted version
             } else {
-                send_unicode_string("ô"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_4) SS_TAP(X_KP_4) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -341,7 +341,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
     case MU:
         if (record->event.pressed) {
-            send_unicode_string("µ");
+            SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_8) SS_TAP(X_KP_1) ));
         }
         return false;
     case U_CIRC:
@@ -354,9 +354,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Û"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_1) SS_TAP(X_KP_9) )); // Shifted version
             } else {
-                send_unicode_string("û"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_5) SS_TAP(X_KP_1) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -373,9 +373,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("À"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_9) SS_TAP(X_KP_2) )); // Shifted version
             } else {
-                send_unicode_string("à"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_2) SS_TAP(X_KP_4) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -392,9 +392,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("É"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_1) )); // Shifted version
             } else {
-                send_unicode_string("é"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_3) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -411,9 +411,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("È"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_0) )); // Shifted version
             } else {
-                send_unicode_string("è"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_2) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -430,9 +430,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Ê"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_2) )); // Shifted version
             } else {
-                send_unicode_string("ê"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_4) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -449,9 +449,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Î"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_6) )); // Shifted version
             } else {
-                send_unicode_string("î"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_8) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -468,9 +468,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Ï"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_0) SS_TAP(X_KP_7) )); // Shifted version
             } else {
-                send_unicode_string("ï"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_9) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -487,9 +487,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Ù"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_1) SS_TAP(X_KP_7) )); // Shifted version
             } else {
-                send_unicode_string("ù"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_4) SS_TAP(X_KP_9) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -506,9 +506,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Æ"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_9) SS_TAP(X_KP_8) )); // Shifted version
             } else {
-                send_unicode_string("æ"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_2) SS_TAP(X_KP_3) SS_TAP(X_KP_0) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -516,10 +516,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         return false;
     case THREE_DOTS:
-        send_unicode_string("…");
+        SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_3) SS_TAP(X_KP_3) ));
         return false;
     case TYPO_APO:
-        send_unicode_string("’");
+        SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_4) SS_TAP(X_KP_6) ));
         return false;
     case OE:
         if (record->event.pressed) {
@@ -531,9 +531,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_mods(MOD_MASK_SHIFT);
 
             if (is_shifted) {
-                send_unicode_string("Œ"); // Shifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_4) SS_TAP(X_KP_0) )); // Shifted version
             } else {
-                send_unicode_string("œ"); // Unshifted version
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_5) SS_TAP(X_KP_6) )); // Unshifted version
             }
 
             // 3. Restore mods
@@ -541,7 +541,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         return false;
     case MIDDLE_DOT:
-        send_unicode_string("·");
+        SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_8) SS_TAP(X_KP_3) ));
         return false;
 
     case DUAL_FUNC_0:
